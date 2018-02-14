@@ -99,6 +99,10 @@ variable "comment" {
   default = "Managed by Terraform"
 }
 
+variable "log_bucket" {
+  default = ""
+}
+
 variable "log_include_cookies" {
   default = "false"
 }
