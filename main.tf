@@ -28,6 +28,7 @@ resource "aws_cloudfront_distribution" "default" {
   comment             = "${var.comment}"
   default_root_object = "${var.default_root_object}"
   price_class         = "${var.price_class}"
+  http_version        = "${var.http_version}"
 
   logging_config = {
     include_cookies = "${var.log_include_cookies}"

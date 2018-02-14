@@ -147,6 +147,10 @@ variable "forward_cookies_whitelisted_names" {
   default     = []
 }
 
+variable "http_version" { 
+  default = "http2"
+}
+
 variable "price_class" {
   default = "PriceClass_100"
 }
