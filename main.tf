@@ -80,9 +80,6 @@ resource "aws_cloudfront_distribution" "default" {
     }
 
     viewer_protocol_policy = "${var.viewer_protocol_policy}"
-    default_ttl            = "${var.default_ttl}"
-    min_ttl                = "${var.min_ttl}"
-    max_ttl                = "${var.max_ttl}"
   }
 
   cache_behavior = "${var.cache_behavior}"
