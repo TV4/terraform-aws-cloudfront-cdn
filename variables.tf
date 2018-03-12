@@ -170,16 +170,16 @@ variable "cached_methods" {
   default = ["GET", "HEAD"]
 }
 
-# defaults to 60
 variable "default_ttl" {
+  default = "60"
 }
 
-# defaults to 0 
 variable "min_ttl" {
+  default = "0"
 }
 
-# defaults to 31536000
 variable "max_ttl" {
+  default = "31536000"
 }
 
 variable "geo_restriction_type" {
