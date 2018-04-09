@@ -147,12 +147,12 @@ variable "forward_cookies_whitelisted_names" {
   default     = []
 }
 
-variable "http_version" { 
+variable "http_version" {
   default = "http2"
 }
 
 variable "price_class" {
-  default = "PriceClass_100"
+  default = "PriceClass_All"
 }
 
 variable "viewer_protocol_policy" {
