@@ -111,7 +111,7 @@ resource "aws_acm_certificate" "cert" {
 }
 
 data "aws_route53_zone" "zone" {
-  name = "b17g-stage.net"
+  name = "${var.parent_zone_name}"
   private_zone = false
 }
 
