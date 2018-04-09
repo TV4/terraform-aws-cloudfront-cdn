@@ -111,6 +111,7 @@ resource "aws_acm_certificate" "cert" {
 }
 
 data "aws_route53_zone" "zone" {
+  count = "${var.acm_certificate_arn == "" ? 1 : 0}"
   name = "${var.parent_zone_name}"
   private_zone = false
 }
