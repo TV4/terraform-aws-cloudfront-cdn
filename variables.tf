@@ -156,7 +156,7 @@ variable "price_class" {
 }
 
 variable "viewer_protocol_policy" {
-  description = "allow-all, redirect-to-https"
+  description = "allow-all, redirect-to-https, https-only"
   default     = "redirect-to-https"
 }
 
@@ -194,4 +194,13 @@ variable "cache_behavior" {
   type        = "list"
   description = "List of cache behaviors to implement"
   default     = []
+}
+
+variable "lambda_arn" {
+  default = ""
+}
+
+variable "lambda_event_trigger_type" {
+  description = "Valid values: viewer-request, origin-request, viewer-response, origin-response"
+  default = ""
 }

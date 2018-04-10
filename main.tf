@@ -99,6 +99,11 @@ resource "aws_cloudfront_distribution" "default" {
     }
   }
 
+  lambda_function_association {
+    event_type = "${var.lambda_event_trigger_type}"
+    lambda_arn = "${var.lambda_arn}"
+  }
+
   tags = "${module.distribution_label.tags}"
 }
 
