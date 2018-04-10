@@ -88,6 +88,11 @@ resource "aws_cloudfront_distribution" "default" {
     }
 
     viewer_protocol_policy = "${var.viewer_protocol_policy}"
+    
+    lambda_function_association {
+      event_type = "${var.lambda_event_trigger_type}"
+      lambda_arn = "${var.lambda_arn}"
+    }
   }
 
   cache_behavior = "${var.cache_behavior}"
@@ -99,10 +104,7 @@ resource "aws_cloudfront_distribution" "default" {
     }
   }
 
-  lambda_function_association {
-    event_type = "${var.lambda_event_trigger_type}"
-    lambda_arn = "${var.lambda_arn}"
-  }
+
 
   tags = "${module.distribution_label.tags}"
 }
