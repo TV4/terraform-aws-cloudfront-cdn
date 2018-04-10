@@ -206,5 +206,6 @@ variable "lambda_event_trigger_type" {
 }
 
 variable "query_string_cache_keys" {
-  default = ""
+  type = "list"
+  default = []
 }
