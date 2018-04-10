@@ -204,3 +204,7 @@ variable "lambda_event_trigger_type" {
   description = "Valid values: viewer-request, origin-request, viewer-response, origin-response"
   default = ""
 }
+
+variable "query_string_cache_keys" {
+  default = ""
+}

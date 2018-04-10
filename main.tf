@@ -80,6 +80,7 @@ resource "aws_cloudfront_distribution" "default" {
       headers = ["${var.forward_headers}"]
 
       query_string = "${var.forward_query_string}"
+      query_string_cache_keys = "${var.query_string_cache_keys}"
 
       cookies {
         forward           = "${var.forward_cookies}"
@@ -88,7 +89,7 @@ resource "aws_cloudfront_distribution" "default" {
     }
 
     viewer_protocol_policy = "${var.viewer_protocol_policy}"
-    
+
     lambda_function_association {
       event_type = "${var.lambda_event_trigger_type}"
       lambda_arn = "${var.lambda_arn}"
