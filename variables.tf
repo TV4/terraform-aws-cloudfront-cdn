@@ -147,12 +147,12 @@ variable "forward_cookies_whitelisted_names" {
   default     = []
 }
 
-variable "http_version" { 
+variable "http_version" {
   default = "http2"
 }
 
 variable "price_class" {
-  default = "PriceClass_100"
+  default = "PriceClass_All"
 }
 
 variable "viewer_protocol_policy" {
@@ -206,4 +206,9 @@ variable "cache_behavior" {
   type        = "list"
   description = "List of cache behaviors to implement"
   default     = []
+}
+
+variable "minimum_protocol_version" {
+  description = "The minimum version of the SSL protocol that you want CloudFront to use for HTTPS connections. One of SSLv3, TLSv1, TLSv1_2016, TLSv1.1_2016 or TLSv1.2_2018"
+  default = "TLSv1"
 }
