@@ -99,10 +99,6 @@ variable "comment" {
   default = "Managed by Terraform"
 }
 
-variable "log_bucket" {
-  default = ""
-}
-
 variable "log_include_cookies" {
   default = "false"
 }
@@ -147,12 +143,8 @@ variable "forward_cookies_whitelisted_names" {
   default     = []
 }
 
-variable "http_version" {
-  default = "http2"
-}
-
 variable "price_class" {
-  default = "PriceClass_All"
+  default = "PriceClass_100"
 }
 
 variable "viewer_protocol_policy" {
@@ -168,6 +160,18 @@ variable "allowed_methods" {
 variable "cached_methods" {
   type    = "list"
   default = ["GET", "HEAD"]
+}
+
+variable "default_ttl" {
+  default = "60"
+}
+
+variable "min_ttl" {
+  default = "0"
+}
+
+variable "max_ttl" {
+  default = "31536000"
 }
 
 variable "geo_restriction_type" {
@@ -194,4 +198,10 @@ variable "cache_behavior" {
   type        = "list"
   description = "List of cache behaviors to implement"
   default     = []
+}
+
+
+variable "minimum_protocol_version" {
+  description = "The minimum version of the SSL protocol that you want CloudFront to use for HTTPS connections. One of SSLv3, TLSv1, TLSv1_2016, TLSv1.1_2016 or TLSv1.2_2018"
+  default = "TLSv1"
 }
