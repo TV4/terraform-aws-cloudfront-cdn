@@ -66,7 +66,7 @@ resource "aws_cloudfront_distribution" "default" {
   viewer_certificate {
     acm_certificate_arn            = "${var.acm_certificate_arn == "" ? join(" ",aws_acm_certificate_validation.cert.*.certificate_arn) : var.acm_certificate_arn}"
     ssl_support_method             = "sni-only"
-    minimum_protocol_version       = "TLSv1"
+    minimum_protocol_version       = "${var.minimum_protocol_version}"
     cloudfront_default_certificate = "${var.acm_certificate_arn == "" ? true : false}"
   }
 
