@@ -30,6 +30,6 @@ output "cf_origin_access_identity" {
   value = "${aws_cloudfront_origin_access_identity.default.cloudfront_access_identity_path}"
 }
 
-output "cf_aws_acm_certificate_validation_arn" {
-  value = "${aws_acm_certificate_validation.cert.0.certificate_arn}"
+output "cf_aws_acm_certificate_arn" {
+  value = "${aws_acm_certificate.cert.0.certificate_arn}"
 }
