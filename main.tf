@@ -105,8 +105,6 @@ resource "aws_cloudfront_distribution" "default" {
     }
   }
 
-
-
   tags = "${module.distribution_label.tags}"
 }
 
