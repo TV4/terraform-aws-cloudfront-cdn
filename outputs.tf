@@ -31,5 +31,5 @@ output "cf_origin_access_identity" {
 }
 
 output "cf_aws_acm_certificate_validation_arn" {
-  value = "${aws_acm_certificate_validation.cert.certificate_arn}"
+  value = "${aws_acm_certificate_validation.cert.0.certificate_arn}"
 }
