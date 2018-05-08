@@ -63,6 +63,11 @@ resource "aws_cloudfront_distribution" "default" {
     }
   }
 
+  origin {
+    domain_name = "${var.s3_origin_domain_name}"
+    origin_id   = "${var.s3_origin_id}"
+  }
+
   viewer_certificate {
     acm_certificate_arn            = "${var.acm_certificate_arn == "" ? join(" ",aws_acm_certificate_validation.cert.*.certificate_arn) : var.acm_certificate_arn}"
     ssl_support_method             = "sni-only"

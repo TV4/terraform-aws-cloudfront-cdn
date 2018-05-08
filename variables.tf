@@ -209,3 +209,13 @@ variable "query_string_cache_keys" {
   type = "list"
   default = []
 }
+
+variable "s3_origin_domain_name" {
+  type = "string"
+  default = ""
+}
+
+variable "s3_origin_id" {
+  type = "string"
+  default = ""
+}
