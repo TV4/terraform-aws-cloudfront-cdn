@@ -105,7 +105,7 @@ resource "aws_cloudfront_distribution" "default" {
     }
   }
 
-  ordered_cache_behavior "${var.ordered_cache_behavior}"
+  ordered_cache_behavior = "${var.ordered_cache_behavior}"
 
   restrictions {
     geo_restriction {
