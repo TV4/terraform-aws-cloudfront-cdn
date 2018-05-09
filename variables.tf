@@ -191,8 +191,9 @@ variable "parent_zone_name" {
 }
 
 variable "ordered_cache_behavior" {
+  type = map
   description = "Cache behaviors to implement"
-  default     = ""
+  default     = {}
 }
 
 variable "lambda_arn" {
