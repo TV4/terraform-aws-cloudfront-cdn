@@ -191,7 +191,8 @@ variable "parent_zone_name" {
 }
 
 variable "ordered_cache_behavior" {
-  default     = {}
+  type = "list"
+  default     = []
 }
 
 variable "lambda_arn" {
