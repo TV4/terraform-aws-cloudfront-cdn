@@ -190,10 +190,10 @@ variable "parent_zone_name" {
   default = ""
 }
 
-variable "cache_behavior" {
+variable "ordered_cache_behavior" {
   type        = "list"
-  description = "List of cache behaviors to implement"
-  default     = []
+  description = "Cache behaviors to implement"
+  default     = ""
 }
 
 variable "lambda_arn" {
