@@ -191,7 +191,6 @@ variable "parent_zone_name" {
 }
 
 variable "ordered_cache_behavior" {
-  type = "map"
   default     = {}
 }
 
